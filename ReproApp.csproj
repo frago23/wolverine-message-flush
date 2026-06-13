@@ -9,10 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Wolverine 4.x. WolverineFx.Marten 4.12.3 transitively pulls in
-         WolverineFx.Postgresql 4.12.3 and Marten 8.10.0 (Marten 8.x as required). -->
-    <PackageReference Include="WolverineFx" Version="4.12.3" />
-    <PackageReference Include="WolverineFx.Marten" Version="4.12.3" />
+    <!-- Latest Wolverine (6.8.0). WolverineFx.Marten 6.8.0 transitively pulls in
+         WolverineFx.Postgresql 6.8.0 and Marten 9.6.0. -->
+    <PackageReference Include="WolverineFx" Version="6.8.0" />
+    <PackageReference Include="WolverineFx.Marten" Version="6.8.0" />
+    <!-- v6 moved the runtime code compiler into its own package (GH-2876); without
+         it the host fails to start in the default TypeLoadMode.Dynamic. It auto-
+         registers just by being referenced. -->
+    <PackageReference Include="WolverineFx.RuntimeCompilation" Version="6.8.0" />
   </ItemGroup>
 
 </Project>
