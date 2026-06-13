@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>ReproApp</RootNamespace>
+    <AssemblyName>ReproApp</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Wolverine 4.x. WolverineFx.Marten 4.12.3 transitively pulls in
+         WolverineFx.Postgresql 4.12.3 and Marten 8.10.0 (Marten 8.x as required). -->
+    <PackageReference Include="WolverineFx" Version="4.12.3" />
+    <PackageReference Include="WolverineFx.Marten" Version="4.12.3" />
+  </ItemGroup>
+
+</Project>
